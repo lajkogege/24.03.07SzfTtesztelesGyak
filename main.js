@@ -1,4 +1,5 @@
-import { tesztesettek_fugvenyemhez } from "./teszt.js";
+import { tesztesetem_fuggvenyemhez } from "./teszt.js";
+
 export function fuggvenyem(szam) {
   let x = 0;
   while (szam != 0) {
@@ -9,8 +10,9 @@ export function fuggvenyem(szam) {
   }
   return x
 }
+//console.log(fuggvenyem())
+tesztesetem_fuggvenyemhez()
 
 /*irj olyan fügvényt amely a bemenétre kapott tetszőleges számot ls szöveget karakterenként megforditja és ezzel az eredménnyel tér visza*/
 
-//console.log(fuggvenyem())
-tesztesettek_fugvenyemhez();
+

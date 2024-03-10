@@ -1,39 +1,43 @@
-import { fuggvenyem } from "./main.js";
+import { fuggvenyem }   from "./main.js";
 
-/*hozz ltre teszt esetteket a leirtak alapján*/
-export function tesztesettek_fugvenyemhez(x){
-let szam=1234;
-let vart=4321;
-console.log(`szam: ${szam}, várt: ${vart}, eredmény: ${vart===fugvenyem(szam)}`);
+// hozz létre tesztelést
 
+export function tesztesetem_fuggvenyemhez(){
+    let szam=1234
+    let vart=4321
+    console.log(`szam: ${szam}, várt: ${vart}, eredmény: ${vart===fuggvenyem(szam)}`);
+    
+    szam = 0;
+    vart = 0;
+    console.log(`szam: ${szam}, várt: ${vart}, eredmény: ${vart===fuggvenyem(szam)}`);
 
-szam=0;
-vart=0;
-console.log(`szam: ${szam}, várt: ${vart}, eredmény: ${vart=== fugvenyem(szam)}`);
+    szam = "00";
+    vart = "00";
+    console.log(`szam: ${szam}, várt: ${vart}, eredmény: ${vart===fuggvenyem(szam)}`);
 
-szam="00";
-vart="00";
-console.log(`szam: ${szam}, várt: ${vart}, eredmény: ${vart===fugvenyem(szam)}`);
+    szam = 23,4;
+    vart = "hiba";
+    console.log(`szam: ${szam}, várt: ${vart}, eredmény: ${vart===fuggvenyem(szam)}`);
 
-szam=23,4;
-vart=4,32;
-console.log(`szam: ${szam}, várt: ${vart}, eredmény: ${vart===fugvenyem(szam)}`);
+    szam = -1234;
+    vart = -4321;
+    console.log(`szam: ${szam}, várt: ${vart}, eredmény: ${vart===fuggvenyem(szam)}`);
 
-szam=-1234;
-vart=-4321;
-console.log(`szam: ${szam}, várt: ${vart}, eredmény: ${vart===fugvenyem(szam)}`);
+    szam = "12345";
+    vart = "hiba";
+    console.log(`szam: ${szam}, várt: ${vart}, eredmény: ${vart===fuggvenyem(szam)}`);
 
-szam=Number.MAX_SAFE_INTEGER;
-vart="???";
-console.log(`szam: ${szam}, várt: ${vart}, eredmény: ${vart===fugvenyem(szam)}`);
+    szam = Number.MAX_VALUE;
+    vart = "nagyon nagy szám";
+    console.log(`szam: ${szam}, várt: ${vart}, eredmény: ${vart===fuggvenyem(szam)}`);
 
-szam=Number.MIN_SAFE_INTEGER;
-vart=4321;
-console.log(`szam: ${szam}, várt: ${vart}, eredmény: ${vart===fugvenyem(szam)}`);
+    szam = Number.MIN_VALUE;
+    vart = "nagyon kicsi szám";
+    console.log(`szam: ${szam}, várt: ${vart}, eredmény: ${vart===fuggvenyem(szam)}`);
 
-szam=1/3;
-vart=0
-console.log(`szam: ${szam}, várt: ${vart}, eredmény: ${vart===fugvenyem(szam)}`);
-
-
+    szam = Number.MAX_SAFE_INTEGER;
+    vart = 1986645007;
+    console.log(`szam: ${szam}, várt: ${vart}, eredmény: ${vart===fuggvenyem(szam)}`);
 }
+//szorgalmi hf --konkrét hibát adjon ki --másik függvény írása
+//írjon olyan függvényt ami a bemenetlére kapott tetszőleges számot és szöveget karakterenként megfordít
